@@ -1,0 +1,84 @@
+$primary: #BCC4DB
+$secondary: #C0A9B0
+$tertiary: #7880B5
+$quaternary: #6987C9
+$quinary: #6BBAEC
+
+$size-one: 3rem
+$size-two: 2.25rem
+$size-three: 2rem
+$size-four: 1.75rem
+$size-five: 1.5rem
+$size-six: 1.25rem
+
+h1
+	font-size: $size-one
+h2
+	font-size: $size-two
+h3
+	font-size: $size-three
+h4
+	font-size: $size-four
+h5
+	font-size: $size-five
+h6
+	font-size: $size-six
+
+
+*
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto', sans-serif
+
+
+body, html
+	height: 100%
+	width: 100%
+
+
+.container
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+
+
+.main
+	height: 60vh
+	width: 60vw
+	p
+		margin-bottom: 20px
+
+.navBar
+	margin-bottom: 5vh
+	margin-top: 10vh
+	display: flex
+	align-items: center
+	justify-content: space-around
+	width: 80vw
+
+	&__links
+		display: flex
+		justify-content: space-around
+		align-items: center
+		width: 30vw
+		padding: 10px
+		a
+			color: black
+			text-decoration: none
+			display: flex
+			flex-direction: column
+			justify-content: center
+			min-height: 50px
+			text-align: center
+			min-width: 100px
+			font-size: $size-six
+			padding: 10px
+			margin: 10px
+			background-color: $quinary
+			border-radius: 5px
+			&:visited
+				color: black
+
+	&__cartWidget
+		font-size: $size-one

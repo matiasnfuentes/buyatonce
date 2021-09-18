@@ -1,0 +1,70 @@
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2.25rem; }
+
+h3 {
+  font-size: 2rem; }
+
+h4 {
+  font-size: 1.75rem; }
+
+h5 {
+  font-size: 1.5rem; }
+
+h6 {
+  font-size: 1.25rem; }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif; }
+
+body, html {
+  height: 100%;
+  width: 100%; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.main {
+  height: 60vh;
+  width: 60vw; }
+  .main p {
+    margin-bottom: 20px; }
+
+.navBar {
+  margin-bottom: 5vh;
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80vw; }
+  .navBar__links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+    padding: 10px; }
+    .navBar__links a {
+      color: black;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 50px;
+      text-align: center;
+      min-width: 100px;
+      font-size: 1.25rem;
+      padding: 10px;
+      margin: 10px;
+      background-color: #6BBAEC;
+      border-radius: 5px; }
+      .navBar__links a:visited {
+        color: black; }
+  .navBar__cartWidget {
+    font-size: 3rem; }
