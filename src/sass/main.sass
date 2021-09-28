@@ -35,6 +35,46 @@ body, html
 	height: 100%
 	width: 100%
 
+header
+	display: flex
+	justify-content: center
+	width: 80%
+
+/* CSS */
+.button 
+	align-items: center
+	background-color: initial
+	background-image: linear-gradient(#464d55, #25292e)
+	border-radius: 8px
+	border-width: 0
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05)
+	box-sizing: border-box
+	color: #fff
+	cursor: pointer
+	display: inline-flex
+	flex-direction: column
+	font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+	font-size: 18px
+	height: 52px
+	justify-content: center
+	line-height: 1
+	margin: 0
+	outline: none
+	overflow: hidden
+	padding: 0 32px
+	text-align: center
+	text-decoration: none
+	transform: translate3d(0, 0, 0)
+	transition: all 150ms
+	vertical-align: baseline
+	white-space: nowrap
+	&:hover 
+		box-shadow: rgba(0, 1, 0, .2) 0 2px 8px
+		opacity: .85
+	&:active 
+		outline: 0
+	&:focus 
+		box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px
 
 .container
 	display: flex
@@ -44,41 +84,82 @@ body, html
 
 
 .main
-	height: 60vh
-	width: 60vw
-	p
-		margin-bottom: 20px
+	width: 80%
 
 .navBar
-	margin-bottom: 5vh
-	margin-top: 10vh
+	margin-bottom: 3%
+	margin-top: 3%
 	display: flex
+	flex-wrap: wrap
 	align-items: center
 	justify-content: space-around
-	width: 80vw
+	width: 100%
 
 	&__links
 		display: flex
 		justify-content: space-around
+		flex-wrap: nowrap
 		align-items: center
-		width: 30vw
 		padding: 10px
 		a
-			color: black
-			text-decoration: none
-			display: flex
-			flex-direction: column
-			justify-content: center
-			min-height: 50px
-			text-align: center
-			min-width: 100px
-			font-size: $size-six
 			padding: 10px
 			margin: 10px
-			background-color: $quinary
-			border-radius: 5px
-			&:visited
-				color: black
 
 	&__cartWidget
 		font-size: $size-one
+
+.itemCount
+	display: flex
+	justify-content: center
+	align-items: center
+	&__count
+		min-width: 50px
+		font-size: $size-five
+		text-align: center
+		font-weight: bold
+	&__button
+		border-radius: 50%
+		height: 30px
+		width: 30px
+		padding: 0px
+
+
+.itemList
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	flex-wrap: wrap
+	width: 100%
+	margin-top: 20px
+	margin-bottom: 50px
+
+.itemCard
+	display: flex
+	flex-direction: column
+	width: 300px
+	height: 550px
+	margin: 40px 20px
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;	border-radius: 15px
+	&__title
+		text-align: center
+		padding: 10px
+		margin-bottom: 10px
+		font-size: $size-three
+	&__image
+		padding: 10px
+		margin-bottom: 10px
+		border-radius: 15px
+	&__description
+		font-size: $size-five
+		padding: 10px
+		margin-bottom: 10px
+	&__button
+		align-self: center
+		margin-bottom: 15px
+
+
+
+
+@media (max-width: 420px) 
+	.button 
+		height: 48px

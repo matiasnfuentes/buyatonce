@@ -5,11 +5,11 @@ const NavBar = () => {
         <nav className = "navBar">
             <h1>BuyAtOnce!</h1>
             <div className="navBar__links">
-                <a href="#">Café de especialidad</a>
-                <a href="#">Accesorios</a>
-                <a href="#">Molinos</a>
-                <a href="#">Métodos de filtrado</a>
-                <a href="#">Maquinas Espresso</a>
+                <a className="button" href="#">Café de especialidad</a>
+                <a className="button" href="#">Accesorios</a>
+                <a className="button" href="#">Molinos</a>
+                <a className="button" href="#">Métodos de filtrado</a>
+                <a className="button" href="#">Maquinas Espresso</a>
             </div>
             <CartWidget/>
         </nav>
