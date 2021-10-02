@@ -122,8 +122,10 @@ header {
 .itemCard {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 300px;
-  height: 550px;
+  height: 600px;
   margin: 40px 20px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   border-radius: 15px; }
@@ -133,6 +135,8 @@ header {
     margin-bottom: 10px;
     font-size: 2rem; }
   .itemCard__image {
+    width: 250px;
+    height: 300px;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 15px; }
@@ -140,9 +144,34 @@ header {
     font-size: 1.5rem;
     padding: 10px;
     margin-bottom: 10px; }
+  .itemCard__itemCount {
+    margin: 10px 0px; }
   .itemCard__button {
     align-self: center;
+    margin-top: 25px;
     margin-bottom: 15px; }
+
+.itemDetail {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  margin-bottom: 50px; }
+  .itemDetail__title {
+    margin-bottom: 15px; }
+  .itemDetail__image {
+    border-radius: 25px;
+    margin-bottom: 15px; }
+  .itemDetail__description {
+    width: 400px;
+    margin-bottom: 15px;
+    font-size: 1.25rem; }
+  .itemDetail__price {
+    margin-bottom: 15px;
+    font-size: 1.25rem; }
 
 @media (max-width: 420px) {
   .button {
