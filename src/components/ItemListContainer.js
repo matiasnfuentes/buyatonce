@@ -7,10 +7,8 @@ const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
     let {id} = useParams();
-    console.log(id)
-    
+
     useEffect(()=>{
-        console.log("en efecto")
         const getProducts = new Promise((res,rej)=>{
             setTimeout( () => {
                 let productsToShow;

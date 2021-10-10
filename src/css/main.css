@@ -97,8 +97,15 @@ header {
 
 .itemCount {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .itemCount__countContainer {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
   .itemCount__count {
     min-width: 50px;
     font-size: 1.5rem;
@@ -144,8 +151,6 @@ header {
     font-size: 1.5rem;
     padding: 10px;
     margin-bottom: 10px; }
-  .itemCard__itemCount {
-    margin: 10px 0px; }
   .itemCard__button {
     align-self: center;
     margin-top: 25px;
@@ -172,6 +177,10 @@ header {
   .itemDetail__price {
     margin-bottom: 15px;
     font-size: 1.25rem; }
+  .itemDetail__itemCount {
+    margin: 20px 0px; }
+  .itemDetail__buyButton {
+    margin: 20px 0px; }
 
 @media (max-width: 420px) {
   .button {

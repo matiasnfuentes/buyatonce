@@ -110,8 +110,15 @@ header
 
 .itemCount
 	display: flex
+	flex-direction: column
 	justify-content: center
 	align-items: center
+	&__countContainer
+		margin-bottom: 20px
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
 	&__count
 		min-width: 50px
 		font-size: $size-five
@@ -157,8 +164,6 @@ header
 		font-size: $size-five
 		padding: 10px
 		margin-bottom: 10px
-	&__itemCount
-		margin: 10px 0px
 	&__button
 		align-self: center
 		margin-top: 25px
@@ -185,6 +190,10 @@ header
 	&__price
 		margin-bottom: 15px
 		font-size: $size-six
+	&__itemCount
+		margin: 20px 0px
+	&__buyButton
+		margin: 20px 0px
 
 
 @media (max-width: 420px) 
