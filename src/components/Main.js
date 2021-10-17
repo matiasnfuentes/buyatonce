@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router";
+import Cart from "./Cart";
 import ItemDetailContainer from "./ItemDetailContainer";
 import ItemListContainer from "./ItemListContainer"
 
@@ -14,6 +15,9 @@ const Main = () => {
                 </Route>
                 <Route exact path="/item/:id">
                     <ItemDetailContainer/>
+                </Route>
+                <Route exact path="/cart">
+                    <Cart/>
                 </Route>
             </Switch>
         </main>

@@ -83,6 +83,9 @@ header {
   align-items: center;
   justify-content: space-around;
   width: 100%; }
+  .navBar__home {
+    height: 60px;
+    padding: 20px; }
   .navBar__links {
     display: flex;
     justify-content: space-around;
@@ -92,7 +95,21 @@ header {
     .navBar__links a {
       padding: 10px;
       margin: 10px; }
-  .navBar__cartWidget {
+
+.cartWidget {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  .cartWidget__link {
+    color: black; }
+    .cartWidget__link:visited {
+      color: black; }
+  .cartWidget__widget {
+    cursor: pointer;
+    font-size: 3rem; }
+  .cartWidget__count {
+    margin-left: 10px;
     font-size: 3rem; }
 
 .itemCount {
@@ -132,18 +149,23 @@ header {
   justify-content: center;
   align-items: center;
   width: 300px;
-  height: 600px;
+  height: 500px;
   margin: 40px 20px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   border-radius: 15px; }
   .itemCard__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 96px;
     text-align: center;
     padding: 10px;
     margin-bottom: 10px;
     font-size: 2rem; }
   .itemCard__image {
-    width: 250px;
-    height: 300px;
+    width: 230px;
+    height: 250px;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 15px; }
@@ -181,6 +203,40 @@ header {
     margin: 20px 0px; }
   .itemDetail__buyButton {
     margin: 20px 0px; }
+
+.cartProduct {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px; }
+  .cartProduct__title {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    width: 200px; }
+  .cartProduct__price {
+    padding: 10px;
+    margin: 10px;
+    width: 100px; }
+  .cartProduct__quantity {
+    padding: 10px;
+    margin: 10px;
+    width: 50px; }
+  .cartProduct__button {
+    padding: 10px;
+    margin: 10px; }
+  .cartProduct__image {
+    border-radius: 75%;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    height: 150px; }
+
+.cartTotal {
+  margin: 10px;
+  padding: 10px; }
 
 @media (max-width: 420px) {
   .button {

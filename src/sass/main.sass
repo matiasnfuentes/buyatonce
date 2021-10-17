@@ -95,6 +95,10 @@ header
 	justify-content: space-around
 	width: 100%
 
+	&__home
+		height: 60px
+		padding: 20px
+
 	&__links
 		display: flex
 		justify-content: space-around
@@ -105,7 +109,20 @@ header
 			padding: 10px
 			margin: 10px
 
-	&__cartWidget
+.cartWidget
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: center
+	&__link
+		color: black
+		&:visited
+			color: black
+	&__widget
+		cursor: pointer
+		font-size: $size-one
+	&__count
+		margin-left: 10px
 		font-size: $size-one
 
 .itemCount
@@ -146,17 +163,22 @@ header
 	justify-content: center
 	align-items: center
 	width: 300px
-	height: 600px
+	height: 500px
 	margin: 40px 20px
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;	border-radius: 15px
 	&__title
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		min-height: 96px
 		text-align: center
 		padding: 10px
 		margin-bottom: 10px
 		font-size: $size-three
 	&__image
-		width: 250px
-		height: 300px
+		width: 230px
+		height: 250px
 		padding: 10px
 		margin-bottom: 10px
 		border-radius: 15px
@@ -195,7 +217,38 @@ header
 	&__buyButton
 		margin: 20px 0px
 
-
+.cartProduct
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	padding: 10px
+	margin: 10px
+	&__title
+		display: inline-block
+		padding: 10px
+		margin: 10px
+		width: 200px
+	&__price
+		padding: 10px
+		margin: 10px
+		width: 100px
+	&__quantity
+		padding: 10px
+		margin: 10px
+		width: 50px
+	&__button
+		padding: 10px
+		margin: 10px
+	&__image
+		border-radius: 75%
+		padding: 10px
+		margin: 10px
+		width: 150px
+		height: 150px
+.cartTotal
+	margin: 10px
+	padding: 10px
 @media (max-width: 420px) 
 	.button 
 		height: 48px
