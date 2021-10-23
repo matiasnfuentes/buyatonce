@@ -24,3 +24,7 @@ Las principales tecnologías usadas son:
 4. Una vez posicionado en esa carpeta ejecutar por consola "npm install"
 5. Luego correr el comando "npm start"
 6. Abrir el browser y dirigirse a la url **http://localhost:3000/**
+
+## Demo
+
+![Demo](https://media.giphy.com/media/MX9ifJwyXq4WBzx0tf/giphy.gif)
