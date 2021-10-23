@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
@@ -30,7 +30,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                     <button onClick ={addItem} className="button itemCount__button">+</button>
                 </div>
                 <button onClick ={confirm} className="button">Confirmar cantidad</button>
-            </div> );
+            </div> )
 }
  
-export default ItemCount;
+export default ItemCount

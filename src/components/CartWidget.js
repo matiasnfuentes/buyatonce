@@ -1,8 +1,8 @@
-import { useCart } from "./CartContext";
-import { Link } from "react-router-dom";  
+import { useCart } from "./CartContext"
+import { Link } from "react-router-dom"  
 
 const CartWidget = () => {
-    const {cart, productCount} = useCart();
+    const {cart, productCount} = useCart()
 
     return (<>
                 {(cart.length > 0 ) ? (<div className="cartWidget">
@@ -12,7 +12,7 @@ const CartWidget = () => {
                                         <p className="cartWidget__count">{productCount}</p>
                                     </div>) : (<></>)}  
             </>  
-             );
+             )
 }
  
-export default CartWidget;
+export default CartWidget

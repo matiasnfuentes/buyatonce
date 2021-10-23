@@ -1,11 +1,13 @@
-import { useCart } from "./CartContext";
-import { Link } from "react-router-dom";
-import CartList from "./CartList";
-import { firestore } from "../firebase";
-import Order from "./Order";
+import { useCart } from "./CartContext"
+import { Link } from "react-router-dom"
+import CartList from "./CartList"
+import { firestore } from "../firebase"
+import Order from "./Order"
+import { useModal } from "./ModalContext"
 
 const Cart = () => {
-    let {cart, total, clearCart} = useCart();
+    const {cart, total, clearCart} = useCart()
+    const {setModalText, showModal} = useModal()
 
     const saveOrder = (buyer) => {
 
@@ -17,7 +19,15 @@ const Cart = () => {
 
         const ordersRef = firestore.collection('orders')
         const query = ordersRef.add(order)
-        clearCart()
+
+        query.then(result => {
+            setModalText(`Se procesó con éxito su compra ID Nº ${result.id}`)
+            clearCart()
+        }).catch( error => 
+            setModalText("Ocurrió un error tratando de procesar su orden!")
+        ).finally(() =>
+            showModal()
+        )
     }
 
     return ( <>
@@ -28,7 +38,7 @@ const Cart = () => {
                         <div className="cartTotal">
                             <h2>Total a pagar: $ {total}</h2>
                         </div>
-                        <Order saveOrder={saveOrder}/>
+                        <Order saveOrder={saveOrder} showModal={showModal} setModalText={setModalText} />
                     </> 
                     :
                     <>
@@ -37,7 +47,7 @@ const Cart = () => {
                     </>
                 }
             </>
-     );
+     )
 }
  
-export default Cart;
+export default Cart

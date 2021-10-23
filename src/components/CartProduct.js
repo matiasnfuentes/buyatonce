@@ -1,11 +1,10 @@
-import { useCart } from "./CartContext";
+import { useCart } from "./CartContext"
 
 const CartProduct = ({product}) => {
 
-    const {title, price, image, quantity} = product;
-    const totalPrice = quantity * price; 
-    const {deleteProduct} = useCart();
-
+    const {title, price, image, quantity} = product
+    const totalPrice = quantity * price 
+    const {deleteProduct} = useCart()
 
     const eliminarProducto = () => deleteProduct(product)
 
@@ -15,7 +14,7 @@ const CartProduct = ({product}) => {
                 <p className="cartProduct__price">$ {totalPrice}</p>
                 <p className="cartProduct__quantity">{quantity} u</p>
                 <button onClick={eliminarProducto} className="button cartProduct__button">Eliminar</button>
-            </div> );
+            </div> )
 }
  
-export default CartProduct;
+export default CartProduct

@@ -1,11 +1,10 @@
-import { createContext , useState , useContext} from 'react';
-import { firestore } from '../firebase';
+import { createContext , useState , useContext} from 'react'
 
-export const context = createContext()
+const context = createContext()
 
-const {Provider} = context;
+const {Provider} = context
 
-export const useCart = () => useContext(context);
+export const useCart = () => useContext(context)
 
 const CustomProvider = ({children}) => {
     const [cart, setCart] = useState([])
@@ -15,7 +14,7 @@ const CustomProvider = ({children}) => {
     const addProduct = (product) => {
         let newCart = [...cart]
         if ( cartHas(product) ){
-            let cartProduct = cart.find(p => p.id == product.id)
+            let cartProduct = cart.find(p => p.id === product.id)
             cartProduct.quantity += product.quantity
         } else {
             newCart.push(product)
@@ -36,7 +35,7 @@ const CustomProvider = ({children}) => {
         setProductCount(0)
         setTotal(0)
     }
-    const cartHas = (product) => cart.find(p => p.id == product.id) !== undefined
+    const cartHas = (product) => cart.find(p => p.id === product.id) !== undefined
 
     const contextValue = {
         productCount,
@@ -53,7 +52,7 @@ const CustomProvider = ({children}) => {
                 {children}
             </Provider>
         </>
-    );
+    )
 }
  
-export default CustomProvider;
+export default CustomProvider
