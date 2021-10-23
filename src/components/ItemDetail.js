@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 const ItemDetail = ({item}) => {
-    let {title, price, image, description} = item;
+    const {title, price, image, description, stock} = item;
     const { addProduct } = useCart();
     const [quantity, setQuantity] = useState();
 
@@ -25,10 +25,10 @@ const ItemDetail = ({item}) => {
                 <div className="itemDetail__itemCount">
                     {quantity ? 
                         <Link className="button itemDetail__buyButton" to="/" onClick={buyItem}>Finalizar compra</Link> : 
-                        <ItemCount initial={0} stock={5} onAdd={onAdd} />}
+                        <ItemCount initial={0} stock={50} onAdd={onAdd} />}
                 </div>
             </div> 
-            );
+    );
 }
  
 export default ItemDetail;

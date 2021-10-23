@@ -4,8 +4,9 @@ import { useParams } from "react-router";
 import { firestore } from '../firebase';
 
 const ItemDetailContainer = () => {
-    let {id} = useParams();
-    const [product, setProduct] = useState({title: "loading", id:-1, price: -1, image: "/loading.gif", description: "loading"});
+    const {id} = useParams();
+    const fakeProduct = {title: "loading", id:"-", price: "-", image: "/loading.gif", description: "loading"}
+    const [product, setProduct] = useState(fakeProduct);
 
     useEffect(()=>{
 

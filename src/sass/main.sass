@@ -246,9 +246,40 @@ header
 		margin: 10px
 		width: 150px
 		height: 150px
+
 .cartTotal
 	margin: 10px
 	padding: 10px
+
+.cart
+	&__emptyTitle
+		margin-bottom: 15px
+	&__backButton
+		margin-bottom: 15px
+
+.order
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	padding: 10px
+	margin: 10px
+	&__inputGroup
+		margin-bottom: 15px
+	&__input
+		border-radius: 5px
+		height: 30px
+		font-size: $size-six
+		margin: 10px
+
+::-webkit-input-placeholder
+	text-align: center
+
 @media (max-width: 420px) 
 	.button 
 		height: 48px
+		text-align: center
+
+@media (max-width: 1400px) 
+	header
+		width: 100%

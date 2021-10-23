@@ -5,7 +5,8 @@ import { firestore } from "../firebase";
 
 const ItemListContainer = () => {
 
-    const [productos, setProductos] = useState([]);
+    const fakeProduct = {title: "loading", id:"-", price: "-", image: "/loading.gif", description: "loading"}
+    const [productos, setProductos] = useState([fakeProduct]);
     const {id} = useParams();
 
     useEffect( () => {
