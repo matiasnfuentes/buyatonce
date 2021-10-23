@@ -7,7 +7,7 @@ import { useModal } from "./ModalContext"
 const ItemListContainer = () => {
 
     const fakeProduct = {title: "loading", id:"-", price: "-", image: "/loading.gif", description: "loading"}
-    const [productos, setProductos] = useState([fakeProduct])
+    const [products, setProducts] = useState([fakeProduct])
     const {id} = useParams()
     const {setModalText, showModal} = useModal()
 
@@ -25,7 +25,7 @@ const ItemListContainer = () => {
 
         query
             .then( (result) => {
-                setProductos(result.docs.map( p => ({id: p.id, ...p.data()})) )
+                setProducts(result.docs.map( p => ({id: p.id, ...p.data()})) )
             })
             .catch( error => {
                 setModalText("Ocurrió un error al tratar de obtener los productos")
@@ -35,7 +35,7 @@ const ItemListContainer = () => {
 
     return (<>
                 <div className="itemList">
-                    <ItemList items={productos}/>
+                    <ItemList items={products}/>
                 </div>
             </>)
 }
