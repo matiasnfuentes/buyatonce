@@ -28,11 +28,9 @@ const ModalProvider = ({children}) => {
     }
 
     return (
-        <>
             <Provider value={contextValue}>
                 {children}
             </Provider>
-        </>
     )
 }
  

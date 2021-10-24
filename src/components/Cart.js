@@ -30,8 +30,7 @@ const Cart = () => {
         )
     }
 
-    return ( <>
-                {   cart.length > 0 
+    return (   cart.length > 0 
                     ?
                     <>
                         <CartList cart={cart}/>
@@ -45,8 +44,6 @@ const Cart = () => {
                         <h2 className = "cart__emptyTitle">El carrito está vacío</h2>
                         <Link className="button cart__backButton" to="/">Volver</Link>
                     </>
-                }
-            </>
      )
 }
  

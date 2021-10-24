@@ -6,7 +6,7 @@ const {Provider} = context
 
 export const useCart = () => useContext(context)
 
-const CustomProvider = ({children}) => {
+const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
     const [productCount, setProductCount] = useState(0)
     const [total, setTotal] = useState(0)
@@ -46,13 +46,11 @@ const CustomProvider = ({children}) => {
         clearCart
     }
 
-    return (  
-        <>
+    return ( 
             <Provider value={contextValue}>
                 {children}
             </Provider>
-        </>
     )
 }
  
-export default CustomProvider
+export default CartProvider

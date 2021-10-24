@@ -33,11 +33,9 @@ const ItemListContainer = () => {
             })
     },[id])
 
-    return (<>
-                <div className="itemList">
-                    <ItemList items={products}/>
-                </div>
-            </>)
+    return (<div className="itemList">
+                <ItemList items={products}/>
+            </div>)
 }
  
 export default ItemListContainer

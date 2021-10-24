@@ -1,23 +1,23 @@
 import { BrowserRouter } from "react-router-dom"
-import CustomProvider from "./CartContext"
+import CartProvider from "./CartContext"
 import Footer from "./Footer"
-import Header from "./Header"
+import NavBar from "./NavBar"
 import Main from "./Main"
 import ModalProvider from "./ModalContext"
 
 const App = () =>{
     return (
-        <CustomProvider>
+        <CartProvider>
         <ModalProvider>
             <BrowserRouter>
                 <div className="container">
-                    <Header />
+                    <NavBar />
                     <Main />
                     <Footer />
                 </div>
             </BrowserRouter>
         </ModalProvider>
-        </CustomProvider>
+        </CartProvider>
     )
 }
 
